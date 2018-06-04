@@ -1,6 +1,6 @@
 class Trip{
   constructor(params){
-    this.id = params["id"];
+    this.id = parseInt(Math.random()*100000);
     this.cab = params["cab"];
     this.start_location = params["start_location"];
     this.end_location = params["end_location"];
@@ -9,7 +9,7 @@ class Trip{
 
   complete(){
     this.status = "completed";
-    this.cab.free();
+    this.cab.free(this.end_location);
   }
 
 }

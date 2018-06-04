@@ -41,6 +41,14 @@ class Cabs{
     }
   }
 
+  find_available_cab(conditions,params){
+    available_cabs = this.cabs;
+    conditions.forEach(function(condition){
+      available_cabs = available_cabs.filter(condition(cab,params));
+    });
+    return available_cabs[0];
+  }
+
 }
 
 module.exports = new Cabs();

@@ -6,6 +6,7 @@ class Cab{
     this.number = params["number"];
     this.type = params["type"];
     this.location = params["location"];
+    this.rider_id = null;
   }
 
   get_location(){
@@ -17,8 +18,13 @@ class Cab{
   }
 
   free(location){
-    this.location = loation;
+    this.location = location;
     this.available = true;
+  }
+
+  book(rider_id){
+    this.available = false;
+    this.rider_id = rider_id;
   }
 
 }
