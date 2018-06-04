@@ -4,6 +4,7 @@ class Cab{
     this.model = params["model"];
     this.driver = params["driver"];
     this.number = params["number"];
+    this.type = params["type"];
     this.location = params["location"];
   }
 
