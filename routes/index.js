@@ -1,9 +1,14 @@
 var router = require('express').Router();
+var bodyParser = require('body-parser');
 var cab = require("./cab");
 var driver = require("./driver");
 var trip = require("./trip");
 var rider = require("./rider");
 var path = require("path");
+
+
+router.use(bodyParser.urlencoded({extended: false}));
+router.use(bodyParser.json());
 
 router.use("*",authenticate); // authenticate requests
 router.use(error_handler);   // Error Handler

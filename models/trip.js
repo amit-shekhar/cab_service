@@ -5,10 +5,16 @@ class Trip{
     this.start_location = params["start_location"];
     this.end_location = params["end_location"];
     this.status = "active";
+    this.rider = params["rider"];
   }
 
-  complete(){
+  start(){
+    this.cab.book();
+    this.cab.rider = this.rider;
+  }
+  complete(cost){
     this.status = "completed";
+    this.cost = cost;
     this.cab.free(this.end_location);
   }
 

@@ -41,10 +41,18 @@ class Cabs{
     }
   }
 
+  available(){
+    return this.cabs.filter(function(cab){
+      return cab.available == true;
+    })
+  }
+
   find_available_cab(conditions,params){
-    available_cabs = this.cabs;
+    var available_cabs = this.cabs;
     conditions.forEach(function(condition){
-      available_cabs = available_cabs.filter(condition(cab,params));
+      available_cabs = available_cabs.filter(function(cab){
+        return condition(cab,params);
+      });
     });
     return available_cabs[0];
   }

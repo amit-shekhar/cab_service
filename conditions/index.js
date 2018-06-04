@@ -8,7 +8,7 @@ var available = function(cab,params){
 
 vicinity_check = function(cab,params){
   var start_location = params["start_location"];
-  return Util.distance_between_points(cab.start_location,start_location) < config.MAX_RIDER_CAB_DISTANCE;
+  return Util.distance_between_points(cab.location,start_location) < config.MAX_RIDER_CAB_DISTANCE;
 }
 
 module.exports = [

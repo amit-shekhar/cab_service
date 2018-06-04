@@ -6,8 +6,10 @@ class Cab{
     this.number = params["number"];
     this.type = params["type"];
     this.location = params["location"];
-    this.rider_id = null;
+    this.rider = null;
+    this.available = true;
   }
+
 
   get_location(){
     return location;
@@ -22,9 +24,9 @@ class Cab{
     this.available = true;
   }
 
-  book(rider_id){
+  book(rider){
     this.available = false;
-    this.rider_id = rider_id;
+    this.rider = rider;
   }
 
 }
