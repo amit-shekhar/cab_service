@@ -3,7 +3,8 @@ class Cab{
     this.id = params["id"]
     this.model = params["model"];
     this.driver = params["driver"];
-    this.location = Location.new(params["location"]);
+    this.number = params["number"];
+    this.location = params["location"];
   }
 
   get_location(){

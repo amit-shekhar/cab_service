@@ -1,4 +1,4 @@
-class Driver{
+class Rider{
   constructor(params){
     this.id = params["id"];
     this.name = params["name"];
@@ -10,6 +10,6 @@ class Driver{
 
 module.exports = {
   new: function(params){
-    return new Driver(params);
+    return new Rider(params);
   }
 }

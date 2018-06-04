@@ -5,11 +5,11 @@ class Cabs{
     }
   }
 
-  create(cab){
+  add(cab){
     this.cabs.push(cab);
   }
 
-  destroy(cab_id){
+  remove(cab_id){
     var to_destroy = this.cabs.findIndex(function(cab){ return cab.id == cab_id; });
     if(to_destroy > -1){
       this.cabs.splice(to_destroy);

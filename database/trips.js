@@ -5,11 +5,11 @@ class Trips{
     }
   }
 
-  create(trip){
+  add(trip){
     this.trips.push(trip);
   }
 
-  destroy(trip_id){
+  remove(trip_id){
     to_destroy = this.trips.findIndex(function(trip){ return trip.id == trip_id; });
     if(to_destroy > -1){
       this.trips.splice(to_destroy);

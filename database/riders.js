@@ -5,11 +5,11 @@ class Riders{
     }
   }
 
-  create(rider){
+  add(rider){
     this.riders.push(rider);
   }
 
-  destroy(rider_id){
+  remove(rider_id){
     var to_destroy = this.riders.findIndex(function(rider){ return rider.id == rider_id; });
     if(to_destroy > -1){
       this.riders.splice(to_destroy);

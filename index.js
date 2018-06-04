@@ -7,13 +7,13 @@ var app = express();
 var database = require('./database');
 var models = require('./models');
 var routes = require("./routes");
-
+var seed = require("./seed");
 
 app.use("/",routes);
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 app.use(express.static(path.resolve('./public')));
-
+seed.run();
 
 // SETUP SERVER //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
