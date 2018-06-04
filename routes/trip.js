@@ -8,7 +8,7 @@ router.get("/",function(request,response){
 });
 
 
-router.post("/book",fuction(request,response){
+router.post("/book",function(request,response){
   var start_location = models.Location.new(request.params.start_location);
   var end_location = models.Location.new(request.params.end_location);
   var rider = database.Riders.find(request.params.rider_id);
